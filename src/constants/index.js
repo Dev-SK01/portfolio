@@ -134,6 +134,10 @@ import {
     {
       id: "java",
       title: "College Project",
+    }, 
+    {
+      id: "c++",
+      title: "Hobby Projects",
     },
   ];
 
@@ -184,7 +188,175 @@ import {
     },
   ];
   
-  export const cProject = [ ];
+  export const cProject = [
+    {
+      name: "Educase Assignment",
+      description:
+        "Here Developed an robust and scalable API , it provides a near school bases on user location",
+      tags: [
+        {
+          name: "Node",
+          color: "blue-text-gradient",
+        }, {
+          name: "Express",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Mysql",
+          color: "blue-text-gradient",
+        },
+        
+      ],
+      image: "https://th.bing.com/th/id/OIP.kuvEDlGvPILNbwtbVS89-AHaE7?w=268&h=180&c=7&r=0&o=5&pid=1.7",
+      source_link: "https://school-api-50023626848.development.catalystappsail.in/",
+      source_code_link: "https://github.com/dev-sk01",
+    },
+    {
+      name: "Kadala Muthu",
+      description:
+        "Realtime Simple Chat Application Inspired by WhatsApp",
+      tags: [
+        {
+          name: "React",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "node",
+          color: "green-text-gradient",
+        },
+        {
+          name: "javascript",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "firebase",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Tailwind",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Express",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: "https://th.bing.com/th/id/OIP.kuvEDlGvPILNbwtbVS89-AHaE7?w=268&h=180&c=7&r=0&o=5&pid=1.7",
+      source_link: "https://github.com/dev-sk01/kadala-muthu",
+      source_code_link: "https://github.com/dev-sk01",
+    },
+    {
+      name: "One Dreamz",
+      description:
+        "Local Ecommerce Application Developed In y 12th STD",
+      tags: [
+        {
+          name: "HTML5",
+          color: "blue-text-gradient",
+        }, {
+          name: "CSS3",
+          color: "green-text-gradient",
+        },
+        {
+          name: "JavaScript",
+          color: "blue-text-gradient",
+        },
+        
+      ],
+      image: "https://th.bing.com/th/id/OIP.kuvEDlGvPILNbwtbVS89-AHaE7?w=268&h=180&c=7&r=0&o=5&pid=1.7",
+      source_link: "https://github.com/dev-sk01/onedreams01",
+      source_code_link: "https://github.com/dev-sk01",
+    },
+    {
+      name: "Node CLI",
+      description:
+        "An Password generator CLI Developed in Node.",
+      tags: [
+        {
+          name: "Node",
+          color: "blue-text-gradient",
+        }, {
+          name: "Commander",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Chalk",
+          color: "blue-text-gradient",
+        },
+        
+      ],
+      image: "https://th.bing.com/th/id/OIP.kuvEDlGvPILNbwtbVS89-AHaE7?w=268&h=180&c=7&r=0&o=5&pid=1.7",
+      source_link: "https://github.com/dev-sk01/node-pass-gen",
+      source_code_link: "https://github.com/dev-sk01",
+    },
+    {
+      name: "Code Editor",
+      description:
+        "An Simple JavaScript Web Code Editor",
+      tags: [
+        {
+          name: "Node",
+          color: "blue-text-gradient",
+        }, {
+          name: "reactjs",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Tailwind",
+          color: "blue-text-gradient",
+        },
+        
+      ],
+      image: "https://th.bing.com/th/id/OIP.kuvEDlGvPILNbwtbVS89-AHaE7?w=268&h=180&c=7&r=0&o=5&pid=1.7",
+      source_link: "https://code-editor-dev.vercel.app",
+      source_code_link: "https://github.com/dev-sk01",
+    },
+    {
+      name: "Blog API",
+      description:
+        "An RestFul Fully Functional blog API",
+      tags: [
+        {
+          name: "Node",
+          color: "blue-text-gradient",
+        }, {
+          name: "Express",
+          color: "green-text-gradient",
+        },
+        {
+          name: "MongoDB",
+          color: "blue-text-gradient",
+        },
+        
+      ],
+      image: "https://th.bing.com/th/id/OIP.kuvEDlGvPILNbwtbVS89-AHaE7?w=268&h=180&c=7&r=0&o=5&pid=1.7",
+      source_link: "https://github.com/dev-sk01/express-blog-api",
+      source_code_link: "https://github.com/dev-sk01",
+    },
+    {
+      name: "Scheme BOT",
+      description:
+        "My Scheme Govt BOT",
+      tags: [
+        {
+          name: "Node",
+          color: "blue-text-gradient",
+        }, {
+          name: "Express",
+          color: "green-text-gradient",
+        },
+        {
+          name: "JavaScript",
+          color: "blue-text-gradient",
+        },
+        
+      ],
+      image: "https://th.bing.com/th/id/OIP.kuvEDlGvPILNbwtbVS89-AHaE7?w=268&h=180&c=7&r=0&o=5&pid=1.7",
+      source_link: "https://scheme-bot.vercel.app",
+      source_code_link: "https://github.com/dev-sk01",
+    },
+    
+   ];
   
   export const webProject = [
     {
@@ -201,8 +373,12 @@ import {
           color: "green-text-gradient",
         },
         {
-          name: "Redux",
+          name: "Node",
           color: "pink-text-gradient",
+        },
+        {
+          name: "Tailwind",
+          color: "blue-text-gradient",
         },
       ],
       image: port_3d,
@@ -230,6 +406,10 @@ import {
           name: "ExpressJS",
           color: "pink-text-gradient",
         },
+        {
+          name: "Tailwind",
+          color: "blue-text-gradient",
+        },
       ],
       image: react1,
       source_link: "https://dev-sk01.github.io/number-kodu/",
@@ -252,6 +432,10 @@ import {
           name: "Bootstrap",
           color: "pink-text-gradient",
         },
+        {
+          name: "Tailwind",
+          color: "blue-text-gradient",
+        },
       ],
       image: jsp,
       source_link: "https://dev-sk01.github.io/News-Da-Mapla-App/",
@@ -266,7 +450,7 @@ import {
         "Designed and Developed A Fully Fucntional Website For Real Esate Client",
       tags: [
         {
-          name: "html",
+          name: "CSS3",
           color: "blue-text-gradient",
         },
         {
@@ -276,6 +460,10 @@ import {
         {
           name: "Javascript",
           color: "pink-text-gradient",
+        },
+        {
+          name: "React",
+          color: "blue-text-gradient",
         },
       ],
       image: be,
@@ -293,7 +481,7 @@ import {
           color: "blue-text-gradient",
         },
         {
-          name: "Redux",
+          name: "JavaScript",
           color: "green-text-gradient",
         },
         {
@@ -319,7 +507,7 @@ import {
           color: "green-text-gradient",
         },
         {
-          name: "Node",
+          name: "Tailwind",
           color: "pink-text-gradient",
         },
       ],
@@ -333,15 +521,15 @@ import {
         "This is first freelancing project. We Designed and Developed website their digital presence. ",
       tags: [
         {
-          name: "React",
+          name: "HTML5",
           color: "blue-text-gradient",
         },
         {
-          name: "Github",
+          name: "Javascript",
           color: "green-text-gradient",
         },
         {
-          name: "Node",
+          name: "CSS",
           color: "pink-text-gradient",
         },
       ],
@@ -354,9 +542,9 @@ import {
   
   const experiences = [
     {
-      title: "Software Devloper",
+      title: "FrontEnd Devloper Intern",
       company_name: "Trio Devs",
-      icon: "https://lh3.googleusercontent.com/p/AF1QipOcMJmSAC07xn4_NxO77lNrO3s0ySID3-pnfh7s=s680-w680-h510",
+      icon: "https://media.licdn.com/dms/image/v2/D560BAQGT3wxB4kba1w/img-crop_100/img-crop_100/0/1719593004363?e=2147483647&v=beta&t=atZn1GS9gdqGCgfkwQ3ytx6Sz4gMC3CLg_8GxeFW1N0",
       iconBg: "#383E56",
       date: "Jun 2024 - Aug 2024 ",
       link: "",
@@ -437,7 +625,7 @@ import {
         "10th Grade",
       branch: "SSC",
       marks:
-        "Percentage : 86.78 %",
+        "Percentage : 80.78 %",
       name: "Govt Higher Secondary School , Kalaiyarkovil",
       year: "2019",
       image: "https://pbs.twimg.com/profile_images/961107678893309957/43VEMGuP_400x400.jpg",
