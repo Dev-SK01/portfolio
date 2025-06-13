@@ -45,9 +45,11 @@ import be from "./project/mcq.png";
 import sql from "./project/sql.png";
 import mini from "./project/library.png";
 import snl from "./project/snl.png";
+import agri from "./project/agri.png";
 
 export {
   logo,
+  agri,
   backend,
   creator,
   mobile,

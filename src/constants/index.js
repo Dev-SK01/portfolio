@@ -3,7 +3,7 @@ import {
     hf,school,
     crypto,oop,yml,
     port_3d, jsp, react1,
-    be,sql, mini, snl,
+    be,sql, mini, snl,agri
   } from "../assets";
 
   const profiles = [
@@ -133,15 +133,49 @@ import {
     },
     {
       id: "java",
-      title: "College Project",
+      title: "College",
     }, 
     {
       id: "c++",
-      title: "Hobby Projects",
+      title: "Hobby",
     },
   ];
 
   export const javaProject = [
+     {
+      name: "Agri Lynx",
+      description:
+        "Connecting farmers with local markets, this platform allows farmers to list their produce and buyers to purchase directly, ensuring fair prices and reducing middlemen.Efficiently manage agricultural produce with this platform that connects farmers to local markets, enabling direct sales and fair pricing.",
+      tags: [
+        {
+          name: "Expres",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "React",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Node",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "mongodb",
+          color: "blue-text-gradient",
+        },
+         {
+          name: "firebase",
+          color: "green-text-gradient",
+        },
+         {
+          name: "zoho-catalyst",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: agri,
+      source_link: "https:/agri-lynx.web.app/",
+      source_code_link: "https://github.com/dev-sk01/agri-lynx",
+    },
     {
       name: "Ucer Idiotz",
       description:
@@ -336,7 +370,7 @@ import {
     {
       name: "Scheme BOT",
       description:
-        "My Scheme Govt BOT",
+        "My Scheme Govt BOT. Naan Muthalvan Ignite Course Scheme Bot is a chat bot that provides information about the Naan Muthalvan Ignite Course Scheme in Tamil Nadu, India. It helps users find details about the scheme, including eligibility criteria, application process, and benefits.",
       tags: [
         {
           name: "Node",
@@ -571,18 +605,6 @@ import {
       link: "https://linktr.ee/webma_startup",
     },
     {
-      title: "FrontEnd Developer Intern",
-      company_name: "Kashiv Info Tech",
-      icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV_xxmpzM33xtiUsI71XSWymSkkXigqHLoVGDljbM4r_63Kz57zU3heHxFARr5e8SiXYU&usqp=CAU",
-      iconBg: "#E6DEDD",
-      date: "May 2024 - Jul 2024",
-      points: [
-        "Worked As FrontEnd Developer in Kashiv Info Tech",
-        "Created A stunning and user friendly website",
-      ],
-      link: "https://linktr.ee/webma_startup",
-    },
-    {
       title: "Freelancer",
       company_name: "WebMa",
       icon: "https://ugc.production.linktr.ee/153376fa-18c1-4665-ad32-3bf90fa7e717_250X250.webp?io=true&size=avatar-v3_0",
@@ -611,9 +633,8 @@ import {
       image: "https://logowik.com/content/uploads/images/anna-university3770.jpg",
     },
     {
-      degree:
-        "12th Grade",
-      branch : "Science",
+      degree:"12th Grade",
+      branch : "HSC",
       marks:
         "Percentage : 85.00 %",
       name: "Govt Higher Secondary School , Kalaiyarkovil",
