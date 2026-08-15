@@ -53,7 +53,7 @@ export const MetricsSection: React.FC = () => {
       {/* Background radial glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[250px] bg-cyan-500/5 rounded-full blur-[140px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
@@ -61,7 +61,7 @@ export const MetricsSection: React.FC = () => {
             <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400" />
             <span>QUANTIFIABLE ENGINEERING IMPACT</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-100 tracking-tight font-sans">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-100 tracking-tight font-sans">
             Production Engineering Metrics
           </h2>
           <p className="text-slate-400 text-sm sm:text-base leading-relaxed">

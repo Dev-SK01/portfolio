@@ -103,12 +103,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume, onOpenVi
       <div className="absolute top-1/4 left-1/3 -translate-x-1/2 w-[320px] sm:w-[700px] h-[250px] sm:h-[350px] bg-gradient-to-tr from-cyan-500/15 via-indigo-500/10 to-purple-600/15 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute bottom-10 right-10 w-[280px] sm:w-[400px] h-[200px] sm:h-[250px] bg-emerald-500/10 rounded-full blur-[130px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
-          
+
           {/* Left Text Column */}
           <div className="lg:col-span-7 space-y-5 sm:space-y-6 text-left">
-            
+
             {/* Availability Pill */}
             <div className="gsap-hero-fade inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-[11px] sm:text-xs font-mono shadow-sm shadow-cyan-500/10 max-w-full">
               <span className="relative flex h-2 w-2 shrink-0">
@@ -120,7 +120,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume, onOpenVi
 
             {/* Main Title & Typing Subtitle */}
             <div className="space-y-2 sm:space-y-3">
-              <h1 className="gsap-hero-fade text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-100 tracking-tight leading-[1.15]">
+              <h1 className="gsap-hero-fade text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-100 tracking-tight leading-[1.15]">
                 Hi, I'm{' '}
                 <span className="inline-block text-gradient font-mono tracking-tight whitespace-nowrap">
                   {typedName}
@@ -131,11 +131,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume, onOpenVi
               </h1>
 
               {/* Animated Typing Role Title */}
-              <div className="gsap-hero-fade text-lg sm:text-2xl font-semibold text-slate-300 font-sans tracking-wide min-h-[34px] sm:min-h-[38px] flex items-center">
+              <div className="gsap-hero-fade text-base sm:text-xl lg:text-2xl font-semibold text-slate-300 font-sans tracking-wide min-h-[32px] sm:min-h-[36px] flex items-center">
                 <span className="text-cyan-300 font-mono font-bold tracking-tight">
                   {currentRoleText}
                 </span>
-                <span className="animate-pulse text-cyan-400 font-extrabold text-xl sm:text-2xl font-mono ml-0.5 drop-shadow-[0_0_8px_rgba(0,242,254,0.8)]">|</span>
+                <span className="animate-pulse text-cyan-400 font-extrabold text-lg sm:text-xl font-mono ml-0.5 drop-shadow-[0_0_8px_rgba(0,242,254,0.8)]">|</span>
               </div>
             </div>
 
@@ -158,39 +158,39 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume, onOpenVi
             </div>
 
             {/* Action Buttons */}
-            <div className="gsap-hero-fade flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-3">
+            <div className="gsap-hero-fade flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 pt-2">
               <Button
                 variant="glow"
-                size="lg"
-                className="w-full sm:w-auto text-center justify-center"
-                icon={<ArrowRight className="w-5 h-5" />}
+                size="md"
+                className="w-full sm:w-auto justify-center"
+                icon={<ArrowRight className="w-4 h-4" />}
                 iconPosition="right"
                 onClick={() => {
                   const element = document.getElementById('projects');
                   element?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
-                View Technical Projects
+                Projects
               </Button>
 
               <Button
                 variant="secondary"
-                size="lg"
-                className="w-full sm:w-auto text-center justify-center"
-                icon={<Video className="w-5 h-5 text-cyan-400" />}
+                size="md"
+                className="w-full sm:w-auto justify-center"
+                icon={<Video className="w-4 h-4 text-cyan-400" />}
                 onClick={onOpenVideoResume}
               >
-                Watch Video Resume
+                Video Resume
               </Button>
 
               <Button
                 variant="outline"
-                size="lg"
-                className="w-full sm:w-auto text-center justify-center"
-                icon={<FileText className="w-5 h-5" />}
+                size="md"
+                className="w-full sm:w-auto justify-center"
+                icon={<FileText className="w-4 h-4" />}
                 onClick={onOpenResume}
               >
-                Inspect Resume PDF
+                Resume PDF
               </Button>
             </div>
 
@@ -199,13 +199,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume, onOpenVi
           {/* Right Profile Photo & Interactive Play Overlay */}
           <div className="lg:col-span-5 gsap-hero-fade flex justify-center lg:justify-end pt-4 lg:pt-0">
             <div className="relative w-full max-w-[290px] sm:max-w-sm md:max-w-md">
-              
+
               {/* Outer Neon Glow Ring */}
               <div ref={avatarRingRef} className="absolute -inset-1.5 bg-gradient-to-tr from-cyan-400 via-indigo-500 to-purple-600 rounded-3xl blur-xl opacity-60 animate-pulse-slow" />
 
               {/* Profile Card Container */}
               <div className="relative rounded-3xl bg-slate-900/90 border border-slate-800 p-4 sm:p-5 shadow-2xl space-y-4 backdrop-blur-xl">
-                
+
                 {/* Image Showcase Frame with Play Overlay */}
                 <div
                   onClick={onOpenVideoResume}
@@ -232,7 +232,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume, onOpenVi
                       <Play className="w-4 h-4 sm:w-5 sm:h-5 fill-cyan-400 text-cyan-400 group-hover/play:fill-slate-950 group-hover/play:text-slate-950 translate-x-0.5 transition-colors drop-shadow-[0_0_8px_rgba(0,242,254,0.8)]" />
                     </button>
                   </div>
-                  
+
                   {/* Photo Overlay Tag */}
                   <div className="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between bg-slate-950/85 backdrop-blur-md px-3 py-2 sm:px-3.5 sm:py-2.5 rounded-xl border border-slate-800/90 shadow-lg">
                     <div className="flex items-center gap-2">

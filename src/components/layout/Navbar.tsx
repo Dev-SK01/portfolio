@@ -59,11 +59,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, onOpenVideoResume 
     <>
       {/* Top Horizontal Navbar (Visible when at top of page) */}
       <header
-        className={`hidden md:flex fixed top-4 left-1/2 -translate-x-1/2 z-40 max-w-7xl w-[94%] flex-row justify-between items-center py-3 px-6 rounded-full bg-slate-950/80 border border-slate-800/80 backdrop-blur-xl shadow-xl transition-all duration-500 ease-out transform ${
-          isDocked
+        className={`hidden md:flex fixed top-4 left-1/2 -translate-x-1/2 z-40 max-w-6xl w-[90%] flex-row justify-between items-center py-3 px-6 rounded-full bg-slate-950/80 border border-slate-800/80 backdrop-blur-xl shadow-xl transition-all duration-500 ease-out transform ${isDocked
             ? '-translate-y-16 opacity-0 pointer-events-none'
             : 'translate-y-0 opacity-100'
-        }`}
+          }`}
       >
         {/* Brand Logo / Avatar */}
         <a
@@ -95,11 +94,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, onOpenVideoResume 
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ${
-                  isActive
+                className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ${isActive
                     ? 'bg-cyan-500 text-slate-950 font-bold shadow-md shadow-cyan-500/20'
                     : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/50'
-                }`}
+                  }`}
               >
                 {item.label}
               </button>
@@ -140,44 +138,42 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, onOpenVideoResume 
 
       {/* Vertical Left Sidebar Dock (Slides in from left when user scrolls) */}
       <aside
-        className={`hidden md:flex fixed top-1/2 -translate-y-1/2 left-5 z-50 flex-col items-center gap-2.5 p-3 rounded-3xl bg-slate-950/95 border border-slate-800/90 backdrop-blur-2xl shadow-2xl shadow-cyan-500/10 transition-all duration-500 ease-out transform ${
-          isDocked
+        className={`hidden md:flex fixed top-1/2 -translate-y-1/2 left-3 lg:left-4 z-50 flex-col items-center gap-1.5 p-2 rounded-2xl bg-slate-950/95 border border-slate-800/90 backdrop-blur-2xl shadow-2xl shadow-cyan-500/10 transition-all duration-500 ease-out transform ${isDocked
             ? 'translate-x-0 opacity-100 scale-100'
             : '-translate-x-32 opacity-0 scale-90 pointer-events-none'
-        }`}
+          }`}
       >
         {/* Avatar Mini Icon / Back to Top */}
         <button
           onClick={() => scrollToSection('hero')}
-          className="relative w-11 h-11 rounded-2xl overflow-hidden border-2 border-cyan-400/60 shadow-lg shadow-cyan-500/20 shrink-0 hover:scale-110 transition-transform group mb-1"
+          className="relative w-9 h-9 rounded-xl overflow-hidden border border-cyan-400/60 shadow-md shadow-cyan-500/20 shrink-0 hover:scale-110 transition-transform group mb-0.5"
           title="Back to Top"
         >
           <img src={personalInfo.avatarUrl} alt={personalInfo.name} className="w-full h-full object-cover object-top" />
           <div className="absolute inset-0 bg-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-            <ArrowUp className="w-4 h-4 text-slate-950 font-bold" />
+            <ArrowUp className="w-3.5 h-3.5 text-slate-950 font-bold" />
           </div>
         </button>
 
         {/* Vertical Nav Item Dock Icons */}
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-1">
           {navItems.map((item) => {
             const isActive = activeSection === item.id;
             return (
               <div key={item.id} className="relative group flex items-center">
                 <button
                   onClick={() => scrollToSection(item.id)}
-                  className={`p-3 rounded-2xl transition-all duration-300 relative flex items-center justify-center ${
-                    isActive
-                      ? 'bg-cyan-500 text-slate-950 font-bold shadow-lg shadow-cyan-500/30 scale-110'
+                  className={`p-2.5 rounded-xl transition-all duration-300 relative flex items-center justify-center ${isActive
+                      ? 'bg-cyan-500 text-slate-950 font-bold shadow-lg shadow-cyan-500/30 scale-105'
                       : 'text-slate-400 hover:text-slate-100 hover:bg-slate-900 border border-transparent hover:border-slate-800'
-                  }`}
+                    }`}
                   aria-label={item.label}
                 >
                   {item.icon}
 
                   {/* Active glowing indicator pill */}
                   {isActive && (
-                    <span className="absolute -left-1 top-1/2 -translate-y-1/2 w-1.5 h-4 rounded-full bg-cyan-400 animate-pulse" />
+                    <span className="absolute -left-1 top-1/2 -translate-y-1/2 w-1 h-3 rounded-full bg-cyan-400 animate-pulse" />
                   )}
                 </button>
 
@@ -195,7 +191,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, onOpenVideoResume 
         {onOpenVideoResume && (
           <button
             onClick={onOpenVideoResume}
-            className="mt-1 p-3 rounded-2xl bg-cyan-500/20 border border-cyan-400/40 text-cyan-300 hover:bg-cyan-500 hover:text-slate-950 transition-all duration-300 group relative"
+            className="p-2.5 rounded-xl bg-cyan-500/20 border border-cyan-400/40 text-cyan-300 hover:bg-cyan-500 hover:text-slate-950 transition-all duration-300 group relative"
             title="Watch Video Resume"
           >
             <Video className="w-4 h-4" />
@@ -208,7 +204,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, onOpenVideoResume 
         {/* Bottom PDF Resume Action Icon */}
         <button
           onClick={onOpenResume}
-          className="p-3 rounded-2xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-cyan-400 hover:border-slate-700 transition-all duration-300 group relative"
+          className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-cyan-400 hover:border-slate-700 transition-all duration-300 group relative"
           title="Inspect Resume PDF"
         >
           <FileText className="w-4 h-4" />
@@ -219,7 +215,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, onOpenVideoResume 
       </aside>
 
       {/* Mobile Top Header (Clean floating header for small devices) */}
-      <header className="md:hidden fixed top-3 left-3 right-3 sm:left-4 sm:right-4 z-50 flex items-center justify-between px-3 py-2.5 sm:px-3.5 sm:py-3 rounded-2xl bg-slate-950/90 border border-slate-800/90 backdrop-blur-xl shadow-2xl max-w-[calc(100vw-1.5rem)] mx-auto">
+      <header className="md:hidden fixed top-3 left-3 right-3 sm:left-4 sm:right-4 z-50 flex items-center justify-between px-3 py-2.5 sm:px-3.5 sm:py-3 rounded-2xl bg-slate-950/90 border border-slate-800/90 backdrop-blur-xl shadow-2xl max-w-[calc(100vw-1.5rem)] md:mx-auto">
         <div className="flex items-center gap-2 shrink truncate">
           <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl sm:rounded-2xl overflow-hidden border-2 border-cyan-400/60 shrink-0">
             <img src={personalInfo.avatarUrl} alt={personalInfo.name} className="w-full h-full object-cover object-top" />
@@ -253,11 +249,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, onOpenVideoResume 
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`w-full text-left px-4 py-2.5 rounded-xl text-sm font-medium transition-colors flex items-center gap-3 ${
-                  activeSection === item.id
+                className={`w-full text-left px-4 py-2.5 rounded-xl text-sm font-medium transition-colors flex items-center gap-3 ${activeSection === item.id
                     ? 'bg-cyan-500/20 text-cyan-300 font-semibold border border-cyan-500/40'
                     : 'text-slate-300 hover:bg-slate-900'
-                }`}
+                  }`}
               >
                 <span className="text-cyan-400">{item.icon}</span>
                 <span>{item.label}</span>

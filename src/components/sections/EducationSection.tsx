@@ -52,8 +52,8 @@ export const EducationSection: React.FC = () => {
   }, []);
 
   return (
-    <section id="education" ref={sectionRef} className="py-20 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="education" ref={sectionRef} className="py-20 relative overflow-hidden">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10">
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           
@@ -70,7 +70,7 @@ export const EducationSection: React.FC = () => {
 
             {educationList.map((edu, idx) => (
               <div key={idx} className="glass-panel rounded-2xl p-6 sm:p-8 border border-slate-800 space-y-4">
-                <div className="flex items-start justify-between gap-4 border-b border-slate-800 pb-4">
+                <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 border-b border-slate-800 pb-4">
                   <div>
                     <div className="flex items-center gap-2 text-xs font-mono text-cyan-400 mb-1">
                       <GraduationCap className="w-4 h-4" />
@@ -81,9 +81,11 @@ export const EducationSection: React.FC = () => {
                       {edu.degree} in {edu.field}
                     </p>
                   </div>
-                  <Badge variant="emerald" size="md">
-                    {edu.grade}
-                  </Badge>
+                  <div className="self-start">
+                    <Badge variant="emerald" size="md">
+                      {edu.grade}
+                    </Badge>
+                  </div>
                 </div>
 
                 {edu.highlights && (

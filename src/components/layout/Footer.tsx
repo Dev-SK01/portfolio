@@ -17,7 +17,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenResume, onOpenVideoResume 
       {/* Subtle background glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[120px] bg-cyan-500/5 rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10 relative z-10 space-y-6">
 
         {/* Main Horizontal Content Row */}
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6 pb-6 border-b border-slate-800/80">

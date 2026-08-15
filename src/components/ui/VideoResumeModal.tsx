@@ -18,6 +18,10 @@ export const VideoResumeModal: React.FC<VideoResumeModalProps> = ({ isOpen, onCl
   const [isMuted, setIsMuted] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
 
+  // Compute base-path aware video source URL to prevent 404 on GitHub Pages or custom base builds
+  const baseUrl = import.meta.env.BASE_URL || './';
+  const videoSrc = `${baseUrl.endsWith('/') ? baseUrl : baseUrl + '/'}video_resume.mp4`;
+
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape' && isOpen) {
@@ -119,19 +123,19 @@ export const VideoResumeModal: React.FC<VideoResumeModalProps> = ({ isOpen, onCl
       >
         
         {/* Modal Header */}
-        <div className="flex items-center justify-between px-6 py-4 bg-slate-900/90 border-b border-slate-800">
-          <div className="flex items-center gap-3">
-            <div className="p-2 rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">
-              <Video className="w-5 h-5" />
+        <div className="flex items-center justify-between px-4 py-3 sm:px-6 sm:py-4 bg-slate-900/90 border-b border-slate-800">
+          <div className="flex items-center gap-2.5 sm:gap-3">
+            <div className="p-2 rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 shrink-0">
+              <Video className="w-4 h-4 sm:w-5 sm:h-5" />
             </div>
             <div className="text-left">
-              <h3 className="text-base font-bold text-slate-100 flex items-center gap-2">
+              <h3 className="text-sm sm:text-base font-bold text-slate-100 flex flex-wrap items-center gap-1.5 sm:gap-2">
                 <span>{personalInfo.name} — Video Resume</span>
-                <span className="text-xs font-mono font-medium text-cyan-400 bg-cyan-500/10 px-2.5 py-0.5 rounded-full border border-cyan-500/30">
+                <span className="text-[10px] font-mono font-medium text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded-full border border-cyan-500/30">
                   HD PRESENTATION
                 </span>
               </h3>
-              <p className="text-xs text-slate-400 font-mono">
+              <p className="text-[11px] sm:text-xs text-slate-400 font-mono">
                 Software Engineer & System Architecture Walkthrough
               </p>
             </div>
@@ -150,7 +154,7 @@ export const VideoResumeModal: React.FC<VideoResumeModalProps> = ({ isOpen, onCl
         <div className="relative bg-slate-950 aspect-video flex items-center justify-center overflow-hidden">
           <video
             ref={videoRef}
-            src="/video_resume.mp4"
+            src={videoSrc}
             onTimeUpdate={handleTimeUpdate}
             onLoadedMetadata={handleLoadedMetadata}
             onEnded={() => setIsPlaying(false)}

@@ -67,7 +67,7 @@ export const ArchitectureSection: React.FC = () => {
       {/* Background ambient glow */}
       <div className="absolute top-1/3 left-0 w-[550px] h-[350px] bg-gradient-to-tr from-cyan-500/10 via-indigo-500/10 to-purple-600/10 rounded-full blur-[160px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
         
         {/* Section Header */}
         <div className="text-left max-w-3xl mb-12 space-y-3">
@@ -75,7 +75,7 @@ export const ArchitectureSection: React.FC = () => {
             <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
             <span>SYSTEM DESIGN & TECHNICAL LEADERSHIP</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-100 tracking-tight font-sans">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-100 tracking-tight font-sans">
             Architecture Solutions & Engineering Highlights
           </h2>
           <p className="text-slate-400 text-base leading-relaxed">

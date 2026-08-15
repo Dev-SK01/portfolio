@@ -35,15 +35,15 @@ export const ExperienceSection: React.FC = () => {
   }, []);
 
   return (
-    <section id="experience" ref={sectionRef} className="py-20 bg-slate-950/40 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="experience" ref={sectionRef} className="py-20 bg-slate-950/40 relative overflow-hidden">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10">
         
         {/* Section Header */}
         <div className="text-left max-w-3xl mb-12 space-y-2">
           <span className="text-xs font-mono font-bold tracking-wider text-cyan-400 uppercase bg-cyan-500/10 px-3 py-1 rounded-full border border-cyan-500/30">
             Career Journey
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-100 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-100 tracking-tight">
             Professional Experience
           </h2>
           <p className="text-slate-400 text-base">
