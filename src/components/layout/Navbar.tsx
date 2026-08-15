@@ -60,8 +60,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, onOpenVideoResume 
       {/* Top Horizontal Navbar (Visible when at top of page) */}
       <header
         className={`hidden md:flex fixed top-4 left-1/2 -translate-x-1/2 z-40 max-w-6xl w-[90%] flex-row justify-between items-center py-3 px-6 rounded-full bg-slate-950/80 border border-slate-800/80 backdrop-blur-xl shadow-xl transition-all duration-500 ease-out transform ${isDocked
-            ? '-translate-y-16 opacity-0 pointer-events-none'
-            : 'translate-y-0 opacity-100'
+          ? '-translate-y-16 opacity-0 pointer-events-none'
+          : 'translate-y-0 opacity-100'
           }`}
       >
         {/* Brand Logo / Avatar */}
@@ -95,8 +95,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, onOpenVideoResume 
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
                 className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ${isActive
-                    ? 'bg-cyan-500 text-slate-950 font-bold shadow-md shadow-cyan-500/20'
-                    : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/50'
+                  ? 'bg-cyan-500 text-slate-950 font-bold shadow-md shadow-cyan-500/20'
+                  : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/50'
                   }`}
               >
                 {item.label}
@@ -114,7 +114,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, onOpenVideoResume 
               icon={<Video className="w-4 h-4 text-cyan-400" />}
               onClick={onOpenVideoResume}
             >
-              Video Resume
+              Video
             </Button>
           )}
           <Button
@@ -123,7 +123,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, onOpenVideoResume 
             icon={<FileText className="w-4 h-4" />}
             onClick={onOpenResume}
           >
-            Resume PDF
+            PDF
           </Button>
           <Button
             variant="primary"
@@ -139,8 +139,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, onOpenVideoResume 
       {/* Vertical Left Sidebar Dock (Slides in from left when user scrolls) */}
       <aside
         className={`hidden md:flex fixed top-1/2 -translate-y-1/2 left-3 lg:left-4 z-50 flex-col items-center gap-1.5 p-2 rounded-2xl bg-slate-950/95 border border-slate-800/90 backdrop-blur-2xl shadow-2xl shadow-cyan-500/10 transition-all duration-500 ease-out transform ${isDocked
-            ? 'translate-x-0 opacity-100 scale-100'
-            : '-translate-x-32 opacity-0 scale-90 pointer-events-none'
+          ? 'translate-x-0 opacity-100 scale-100'
+          : '-translate-x-32 opacity-0 scale-90 pointer-events-none'
           }`}
       >
         {/* Avatar Mini Icon / Back to Top */}
@@ -164,8 +164,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, onOpenVideoResume 
                 <button
                   onClick={() => scrollToSection(item.id)}
                   className={`p-2.5 rounded-xl transition-all duration-300 relative flex items-center justify-center ${isActive
-                      ? 'bg-cyan-500 text-slate-950 font-bold shadow-lg shadow-cyan-500/30 scale-105'
-                      : 'text-slate-400 hover:text-slate-100 hover:bg-slate-900 border border-transparent hover:border-slate-800'
+                    ? 'bg-cyan-500 text-slate-950 font-bold shadow-lg shadow-cyan-500/30 scale-105'
+                    : 'text-slate-400 hover:text-slate-100 hover:bg-slate-900 border border-transparent hover:border-slate-800'
                     }`}
                   aria-label={item.label}
                 >
@@ -250,8 +250,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, onOpenVideoResume 
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
                 className={`w-full text-left px-4 py-2.5 rounded-xl text-sm font-medium transition-colors flex items-center gap-3 ${activeSection === item.id
-                    ? 'bg-cyan-500/20 text-cyan-300 font-semibold border border-cyan-500/40'
-                    : 'text-slate-300 hover:bg-slate-900'
+                  ? 'bg-cyan-500/20 text-cyan-300 font-semibold border border-cyan-500/40'
+                  : 'text-slate-300 hover:bg-slate-900'
                   }`}
               >
                 <span className="text-cyan-400">{item.icon}</span>
